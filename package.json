@@ -1,16 +1,24 @@
 {
-  "name": "snowboy",
+  "name": "@mathquis/node-snowboy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js bindings for Snowboy hotword detection",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp rebuild"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathquis/node-snowboy.git"
+  },
   "author": "Mathieu \"Fastjack\" Quisefit",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathquis/node-snowboy/issues"
+  },
   "gypfile": true,
   "dependencies": {
     "nan": "^2.14.0"
-  }
+  },
+  "homepage": "https://github.com/mathquis/node-snowboy#readme"
 }
