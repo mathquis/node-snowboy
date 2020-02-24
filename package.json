@@ -1,0 +1,16 @@
+{
+  "name": "snowboy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "author": "Mathieu \"Fastjack\" Quisefit",
+  "license": "ISC",
+  "gypfile": true,
+  "dependencies": {
+    "nan": "^2.14.0"
+  }
+}
