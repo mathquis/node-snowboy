@@ -5,4 +5,4 @@ Node.js bindings for Snowboy hotword detection
 `apt install libblas-dev`
 
 ### Installation
-`npm i node-snowboy`
+`npm i @mathquis/node-snowboy`
