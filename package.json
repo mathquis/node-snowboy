@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "Node.js bindings for Snowboy hotword detection",
   "main": "lib/index.js",
+  "gypfile": true,
+  "binary": {
+    "module_name": "snowboy",
+    "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/mathquis/node-snowboy/releases/download/",
+    "remote_path": "{version}"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-gyp rebuild"
+    "preinstall": "npm install node-pre-gyp",
+    "install": "node-pre-gyp install --fallback-to-build",
+    "configure": "node-gyp configure",
+    "build": "npm run configure && node-gyp build && npm test",
+    "rebuild": "npm run configure && node-gyp rebuild && npm test",
+    "test": "node test.js",
+    "publish": "node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && node-pre-gyp-github publish --release"
   },
   "repository": {
     "type": "git",
@@ -16,8 +29,8 @@
   "bugs": {
     "url": "https://github.com/mathquis/node-snowboy/issues"
   },
-  "gypfile": true,
   "dependencies": {
+    "node-pre-gyp": "^0.14.0",
     "nan": "^2.14.0"
   },
   "homepage": "https://github.com/mathquis/node-snowboy#readme"
