@@ -1,6 +1,6 @@
 {
   "name": "@mathquis/node-snowboy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.js bindings for Snowboy hotword detection",
   "main": "lib/index.js",
   "gypfile": true,
