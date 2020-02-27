@@ -1,4 +1,8 @@
 build
+lib/binding
 node_modules
+resources
 .gitignore
+*.md
 *.wav
+test.js
